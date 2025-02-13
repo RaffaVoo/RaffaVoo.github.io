@@ -1,4 +1,6 @@
-export type CollectionName = "blog" | "projects" | "talks";
+// NOTE: The original — I removed projects and talks
+//export type CollectionName = "blog" | "projects" | "talks";
+export type CollectionName = "blog";
 
 
 export type GlobalSite = {
@@ -13,14 +15,11 @@ export type GlobalSite = {
 };
 
 export const GLOBAL: GlobalSite = {
-  title: "Astro Milidev",
-  description: "a minimalistic blog+portfolio Astro theme",
-  author: "John Doe",
-  authorPhotoSrc: "/johndoe.png",
-  logo: {
-    darkThemeSrc: "/logo/logo_dark.png",
-    lightThemeSrc: "/logo/logo_light.png",
-  }
+  title: "Raph's Test Website",
+  description: "A test website to be submitted for Rosa's approval",
+  author: "Raph",
+  authorPhotoSrc: "/mango-sneeze.png",
+  logo: null
 };
 
 
@@ -30,14 +29,10 @@ type CollectionSite =  {
 
 type HomeSite =  {
   blogEntries?: number;
-  projectEntries?: number;
-  talkEntries?: number;
 }
 
 export const HOME: HomeSite = {
   blogEntries: 5,
-  projectEntries: 3,
-  talkEntries: 3,
 };
 
 type BlogSite = CollectionSite & {

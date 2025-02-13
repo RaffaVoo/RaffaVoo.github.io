@@ -7,8 +7,7 @@ import { GLOBAL } from "@consts";
 const anyBlogPosts =
   (await getFilteredCollectionEntries("blog")).entries.length > 0;
 
-const anyTalks =
-  (await getFilteredCollectionEntries("talks")).entries.length > 0;
+
 
 const anyProjects =
   (await getFilteredCollectionEntries("projects")).entries.length > 0;
@@ -30,41 +29,31 @@ const anyProjects =
         }
       </TextLink>
       <nav class="flex items-center gap-1 text-sm">
-        <TextLink href={resolvePath("/hire-me", Astro.url.pathname)}
-          >hire me</TextLink
-        >
-        {" "}
-        {
-          anyBlogPosts && (
-            <>
-              <span>{`|`}</span>
-              <TextLink href={resolvePath("/blog", Astro.url.pathname)}>
-                blog
-              </TextLink>
-            </>
-          )
-        }
-        {
-          anyTalks && (
-            <>
-              <span>{`|`}</span>
-              <TextLink href={resolvePath("/talks", Astro.url.pathname)}>
-                talks
-              </TextLink>
-            </>
-          )
-        }
-        {
-          anyProjects && (
-            <>
-              <span>{`|`}</span>
-              <TextLink href={resolvePath("/projects", Astro.url.pathname)}>
-                projects
-              </TextLink>
-            </>
-          )
-        }
-        <span>{`|`}</span>
+        <select name="language" id="language" class="bg-transparent -translate-x-2">
+          <option value="English">English</option>
+          <option value="中文">中文</option>
+        </select>
+        <div class="-translate-x-1">
+          {
+            anyBlogPosts && (
+              <>
+                <TextLink href={resolvePath("/blog", Astro.url.pathname)}>
+                  blog
+                </TextLink>
+              </>
+            )
+          }
+          {
+            anyProjects && (
+              <>
+                <span>{`|`}</span>
+                <TextLink href={resolvePath("/projects", Astro.url.pathname)}>
+                  projects
+                </TextLink>
+              </>
+            )
+          }
+        </div>
         <button
           id="magnifying-glass"
           aria-label="Search"
