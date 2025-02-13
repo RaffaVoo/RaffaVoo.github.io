@@ -1,1 +1,12 @@
 media: src/media
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/content/blog
+    fields: 
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Description, type: string }
+      - { name: date, label: Date, type: string }
+      - { name: tags, label: Tags, type: string }
+    
