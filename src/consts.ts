@@ -28,10 +28,12 @@ type CollectionSite =  {
 
 type HomeSite =  {
   blogEntries?: number;
+  projectEntries?: number;
 }
 
 export const HOME: HomeSite = {
   blogEntries: 5,
+  projectEntries: 5,
 };
 
 type BlogSite = CollectionSite & {
