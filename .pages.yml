@@ -12,7 +12,7 @@ content:
       - { name: images, label: Images, type: image, list: true}
       - { name: body, label: Body, type: rich-text}
     view:
-      fields: [ title ]
+      fields: [ title, date ]
       primary: title
       sort: [ date, title ]
       default:
