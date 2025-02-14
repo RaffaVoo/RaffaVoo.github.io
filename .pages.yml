@@ -9,4 +9,13 @@ content:
       - { name: description, label: Description, type: string }
       - { name: date, label: Date, type: string }
       - { name: tags, label: Tags, type: string }
-    
+      - { name: images, label: Images, type: image, list: true}
+      - { name: body, label: Body, type: rich-text}
+    view:
+      fields: [ title ]
+      primary: title
+      sort: [ date, title ]
+      default:
+        search: ''
+        sort: title
+        order: desc
