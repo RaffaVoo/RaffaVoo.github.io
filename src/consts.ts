@@ -1,6 +1,6 @@
 // NOTE: The original — I removed projects and talks
 //export type CollectionName = "blog" | "projects" | "talks";
-export type CollectionName = "blog";
+export type CollectionName = "blog" | "projects";
 
 
 export type GlobalSite = {
@@ -18,8 +18,7 @@ export const GLOBAL: GlobalSite = {
   title: "Raph's Test Website",
   description: "A test website to be submitted for Rosa's approval",
   author: "Raph",
-  authorPhotoSrc: "/mango-sneeze.png",
-  logo: null
+  authorPhotoSrc: "/mango-sneeze.png"
 };
 
 

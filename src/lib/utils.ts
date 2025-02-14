@@ -98,7 +98,6 @@ export function formatDateWithLastUpdateDate(date: Date, lastUpdateDate?: Date):
 export async function getAllEntriesWithTags() {
   const entries = [
     ...(await getFilteredCollectionEntries("blog")).entries,
-    ...(await getFilteredCollectionEntries("talks")).entries,
     ...(await getFilteredCollectionEntries("projects")).entries,
   ].sort(sortByLastUpdateDate);
 
