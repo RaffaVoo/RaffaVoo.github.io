@@ -8,7 +8,7 @@ import pagefind from "astro-pagefind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://raffavoo.github.io",
-  base: "/raffavoo.github.io/",
+  base: "/",
   integrations: [tailwind(), sitemap(), mdx(), pagefind()],
   markdown: {
     shikiConfig: {
