@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 // TODO: Will probably want to add loader to make it work with CMS
 const blog = defineCollection({
   type: "content",
-  loader: glob({ pattern: ["*.mdx", "*.astro"], base: "./src/content/blog"}),
+  //loader: glob({ pattern: ["*.mdx", "*.astro"], base: "./src/content/blog"}),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
