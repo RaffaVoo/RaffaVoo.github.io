@@ -1,0 +1,9 @@
+---
+title: Pages CMS test
+description: This is a test of pages CMS. Idk if it'll work
+date: 2025-03-22
+tags: Test
+images:
+  - /src/media/xinhai-revolution.jpg
+---
+Hello! This is a test of pages CMS. I'm not sure if it'll work
