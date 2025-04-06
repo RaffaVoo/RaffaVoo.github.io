@@ -12,6 +12,7 @@ export interface Heading {
 }
 
 function buildToc(headings: Heading[]) {
+  console.log("|RAPHDEBUG| Headings: ", headings);
   const toc: Heading[] = [];
   const parentHeadings = new Map();
   headings.forEach((h) => {
@@ -19,7 +20,8 @@ function buildToc(headings: Heading[]) {
     parentHeadings.set(heading.depth, heading);
     if (heading.depth === 2) {
       toc.push(heading);
-    } else {
+    // FIXME: This used to just be an else branch, but it was throwing errors when heading.depth == 1; make sure changing this won't cause problems
+    } else if (heading.depth > 1) {
       parentHeadings.get(heading.depth - 1).subheadings.push(heading);
     }
   });
