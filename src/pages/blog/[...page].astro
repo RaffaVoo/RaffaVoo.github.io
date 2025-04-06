@@ -19,9 +19,13 @@ const { page } = Astro.props as {
   page: { data: { props: any }[]; currentPage: number; lastPage: number };
 };
 
+// FIXME: For some reason, entries has every page but the most recent one
 const entries = page.data.map((pageEntry) => ({
   ...pageEntry.props,
 }));
+// DEBUG
+// const entryNames = entries.map((e) => e.data.title);
+// console.log("|RAPHDEBUG|: Entries before:", entryNames);
 ---
 
 <RootPageIndex title="Blog">
